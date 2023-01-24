@@ -17,8 +17,23 @@ function App() {
     //     message = "Hi there!";
     // }
     // return <h1> {new Date().toLocaleTimeString()}</h1>
-    return <input type= "number" min={5} />
-    
+    // return <input style={{border:'3px solid red'}} type= "number" min={5} />
+    // return <textarea autoFocus={true} />
+    // return < input spellCheck={false}/>
+    // return (
+    //     <input placeholder='hi there' />
+    // )
+    //****************************  Exercice    ********************************** */
+    return(
+        <div className="wrapper">
+            <textarea 
+                readOnly
+                maxLength={3}
+                spellCheck= "true"
+                style =  {{backgroundColor: "gray"}}
+            />
+        </div>
+    )
 }
 
 // 5-) show the component at the screen

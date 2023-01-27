@@ -1,31 +1,29 @@
-// import AnimalShow from "./AnimalShow";
+import AnimalShow from "./AnimalShow";
+import { useState } from "react";
+import './App.css'
 
-// import { useState } from "react";
+// const animals = ['bird','cat','cow','dog','gator','horse'];
+function getRandomAnimal(){
+    const animals = ['bird','cat','cow','dog','gator','horse'];
+    return animals[Math.floor(Math.random() * animals.length)]
+}
 
 function App() {
+    const [animals, setAnimals] = useState([]);
 
-    //Array destructuring
-    function myArray(){
-        return [1,2,3,4,5];
-    }
-    const [firstElement, secondElement] = myArray();
-    console.log(firstElement, secondElement);
-    //instead of
-    const myArr = myArray();
-    const firstElemen = myArr[0];
-    const secondElemen = myArr[1];
-    console.log(firstElemen, secondElemen);
-    // const [count, setCount] = useState(0);
+    const renderedAnimals = animals.map((animals, index) => {
+        return <AnimalShow type={animals} key={index}  />
+    });
 
-    // const handleClick = () => {
-    //     setCount(count + 1);
-    // };
+    const handleClick = () => {
+        setAnimals([...animals,  getRandomAnimal()]);
+    };
 
-    // return (
-    //     <div>
-    //         <button onClick={handleClick}>Add animal</button>
-    //         <div>Number of animals: {count}</div>
-    //     </div>
-    // );
+    return (
+        <div className="app">
+            <button onClick={handleClick}>Add animal</button>
+            <div className="animal-list">{renderedAnimals}</div>
+        </div>
+    );
 }
 export default App;

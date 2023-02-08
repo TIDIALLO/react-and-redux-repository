@@ -8,8 +8,7 @@ function App() {
 
     useEffect(() => {
         fetchBooks();
-        // eslint-disable-next-line
-    }, []);
+    }, [fetchBooks]);
 
     return (
         <div className="app">

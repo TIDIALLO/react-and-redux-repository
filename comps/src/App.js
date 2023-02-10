@@ -1,18 +1,28 @@
-import Button from "./Button";
-import { GrAed, GrCart } from 'react-icons/gr'
+import ButtonPage from "./pages/ButtonPage";
+import Accordion from "./components/Accordion";
 function App() {
-    const handleClick = () => {
-        console.log("clicked")
-    }
+    const items = [
+        {
+            id: "i1",
+            label: "Can i use React on a project?",   
+            content: "You can use React on any project you want. You can use React on any project you want You can use React on any project you want You can use React on any project you want  "
+        },{
+            id: "i2",
+            label: "Can i use Javascript on a project?",   
+            content: "You can use React on any project you want. You can use React on any project you want You can use React on any project you want You can use React on any project you want  "
+        },{
+            id: "i3",
+            label: "Can i use CSS on a project?",   
+            content: "You can use React on any project you want. You can use React on any project you want You can use React on any project you want You can use React on any project you want  "
+        }
+    ];
     return (
-        <div>
-            <div> <Button primary rounded onClick={handleClick}> <GrAed />Hi there! </Button> </div>
-            <div> <Button secondary rounded outline>Buy Now!!</Button> </div>
-            <div> <Button success><GrCart />Add!!!!!!</Button> </div>
-            <div> <Button warning outline>Hi there!</Button> </div>
-            <div> <Button danger rounded>Hi there!</Button> </div>
-        </div>
+    <div>
+        <Accordion items={items}/>
+        <ButtonPage/>
+    </div>
     )
+
 }
 
 export default App;

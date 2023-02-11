@@ -15,8 +15,8 @@ function App() {
     <div>
         <Dropdown  
             options={options}
-            selection={selection}
-            onSelect={handleSelection}    
+            value={selection}
+            onChange={handleSelection}    
         />
     </div>
     )

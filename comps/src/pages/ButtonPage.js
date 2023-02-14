@@ -3,7 +3,6 @@ import { GrAed, GrCart } from 'react-icons/gr'
 
 function ButtonPage() {
     const handleClick = () => {
-        console.log("clicked")
     }
     return (
         <div>

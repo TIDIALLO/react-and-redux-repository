@@ -6,8 +6,7 @@ import ButtonPage from "./pages/ButtonPage";
 function App() {
     return (
         <div className="container mx-auto grid grid-col-6 gap-4 mt-4" >
-            {/* <Link to="/accordion">Go to Accordion</Link>
-            <Link to="/dropdown">Go to Dropdown</Link> */}
+            
             <Sidebar></Sidebar>
             <div className="col-span-5">
                 <Route path="/accordion"> <AccordionPage></AccordionPage> </Route>

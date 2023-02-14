@@ -12,7 +12,7 @@ function DropdownPage() {
         {label: 'blue', value: 'blue'},
     ]
     return (
-    <div className="flex ">
+    <div className="flex">
         <Dropdown  
             options={options}
             value={selection}

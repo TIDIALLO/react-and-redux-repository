@@ -1,12 +1,12 @@
+import { Fragment } from "react";
+
 function Table({ data, config, keyFn }) {
 
     const renderHeaders = config.map((column) => {
         if(column.header){
-            return column.header();
+            return <Fragment key={column.label}>{column.header()}</Fragment>;
         }
-        return(
-            <th key={column.label}>{column.label}</th>
-        );
+        return  <th key={column.label}>{column.label}</th>
     });
 
     const renderedRows = data.map((rowData) => {
@@ -17,9 +17,6 @@ function Table({ data, config, keyFn }) {
         });
         return (
             <tr className="border-b" key={keyFn(rowData)} >
-                {/* <td className="p-3">{config[0].render(fruit)}</td>
-                <td className="p-3">{config[1].render(fruit)}</td>
-                <td className="p-3">{config[2].render(fruit)}</td> */}
                 {renderedCells}
             </tr>
         );

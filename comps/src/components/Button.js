@@ -1,9 +1,9 @@
 import className from "classnames";
 
-const finalClassName = ('px-1.5', {
-    'bg-blue-500': true,
-})
-console.log(finalClassName);
+// const finalClassName = ('px-1.5', {
+//     'bg-blue-500': true,
+// })
+// console.log(finalClassName);
 
 function Button({
     children,
@@ -16,7 +16,7 @@ function Button({
     outline,
     ...rest// recupére toutes les variables restantes
 }) {
-console.log(rest)
+// console.log(rest)
 
     const classes = className(rest.className,'flex items-center px-3 py-1.5 border', {
         'border-blue-600 bg-blue-500 text-white': primary,

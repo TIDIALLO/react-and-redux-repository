@@ -23,7 +23,7 @@ const reducer = (state, action) => {
             state.count = state.count +state.valueToAdd
             state.valueToAdd = 0;
             return;
-        default:
+        default:    
             return;
     }
 }

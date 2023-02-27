@@ -2,9 +2,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeCar } from "../store";
 function CarList() {
     const dispatch = useDispatch();
-    const cars = useSelector((state) => {
-        return state.cars.data;
-    });
+
+    const cars = useSelector(({cars: {data, searchTerm}}) => {
+        return data.filter((car) => 
+            car.name.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+    })
+
     const handleCarDeleted = (car) => {
         dispatch(removeCar(car.id));
     }
@@ -12,7 +16,7 @@ function CarList() {
         return (
             <div key={car.id} className="panel">
                 <p>
-                    {car.name} -${car.cost}
+                    {car.name} - ${car.cost}
                 </p>
                 <button className="button  is-danger" onClick={() => handleCarDeleted(car)}>
                     Delete

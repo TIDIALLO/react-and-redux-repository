@@ -1,5 +1,4 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit';
-
 const carsSlice = createSlice({
     name: 'cars',
     initialState: {

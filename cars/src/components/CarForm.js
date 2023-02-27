@@ -22,8 +22,10 @@ function CarForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         dispatch(addCar({ name, cost }));
-        dispatch(changeName(''));
-        dispatch(changeCost(0));
+        // Ces deux ligns permettes de reinitialiser les chaps d'entrés name et cost
+        //une autre façon de la faire est d'utiliser extraReducer
+        // dispatch(changeName(''));
+        // dispatch(changeCost(0));
     }
 
     return (

@@ -12,7 +12,7 @@ const carsSlice = createSlice({
         },
         addCar(state, action) {
             // Assumption:
-            // action.payload === { name: 'ab', cost: 140 }
+            // action.payload === { name: 'asdf', cost: 646 }
             state.cars.push({
                 name: action.payload.name,
                 cost: action.payload.cost,

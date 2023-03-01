@@ -1,5 +1,78 @@
 {
-    "users":[{"id":1, "name": "Myra"}],
-    "albums":[],
-    "photos":[]
+  "users": [
+    {
+      "id": 1,
+      "name": "Myra"
+    },
+    {
+      "name": "Tidiane Diallo",
+      "id": 2
+    },
+    {
+      "name": "Angelica Terry",
+      "id": 3
+    },
+    {
+      "name": "Beatrice Green V",
+      "id": 4
+    },
+    {
+      "name": "Vera Bartell DVM",
+      "id": 5
+    },
+    {
+      "name": "Camille Stroman",
+      "id": 6
+    },
+    {
+      "name": "Hope Huels",
+      "id": 7
+    },
+    {
+      "name": "Amelia Brakus",
+      "id": 8
+    },
+    {
+      "name": "Milton Monahan Jr.",
+      "id": 9
+    },
+    {
+      "name": "Laverne Lynch",
+      "id": 10
+    },
+    {
+      "name": "Melba Jacobson",
+      "id": 11
+    },
+    {
+      "name": "Everett Collier Sr.",
+      "id": 12
+    },
+    {
+      "name": "Doyle Langosh",
+      "id": 13
+    },
+    {
+      "name": "Delores Bashirian",
+      "id": 14
+    },
+    {
+      "name": "Miss Faye Klein",
+      "id": 15
+    },
+    {
+      "name": "Mr. Noel Waelchi",
+      "id": 16
+    },
+    {
+      "name": "Meghan Sauer",
+      "id": 17
+    },
+    {
+      "name": "Wilson O'Kon",
+      "id": 18
+    }
+  ],
+  "albums": [],
+  "photos": []
 }

@@ -9,20 +9,8 @@
       "id": 2
     },
     {
-      "name": "Monica Gutmann",
+      "name": "Rudolph Howell Sr.",
       "id": 3
-    },
-    {
-      "name": "Myra Casper",
-      "id": 4
-    },
-    {
-      "name": "Cathy Kirlin",
-      "id": 5
-    },
-    {
-      "name": "Rick Tremblay",
-      "id": 6
     }
   ],
   "albums": [
@@ -40,6 +28,66 @@
       "userId": 1,
       "title": "Fantastic Plastic Car",
       "id": 12
+    },
+    {
+      "userId": 1,
+      "title": "Tasty Metal Hat",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "title": "Gorgeous Bronze Chips",
+      "id": 15
+    },
+    {
+      "userId": 2,
+      "title": "Tasty Wooden Towels",
+      "id": 16
+    },
+    {
+      "userId": 2,
+      "title": "Modern Plastic Fish",
+      "id": 17
+    },
+    {
+      "userId": 2,
+      "title": "Oriental Plastic Soap",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "title": "Incredible Rubber Table",
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "title": "Recycled Wooden Car",
+      "id": 22
+    },
+    {
+      "userId": 1,
+      "title": "Elegant Cotton Computer",
+      "id": 23
+    },
+    {
+      "userId": 3,
+      "title": "Handcrafted Granite Hat",
+      "id": 24
+    },
+    {
+      "userId": 2,
+      "title": "Tasty Steel Chips",
+      "id": 25
+    },
+    {
+      "userId": 3,
+      "title": "Tasty Wooden Fish",
+      "id": 26
+    },
+    {
+      "userId": 2,
+      "title": "Licensed Fresh Chicken",
+      "id": 27
     }
   ],
   "photos": []

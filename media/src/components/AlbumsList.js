@@ -6,7 +6,7 @@ function AlbumsList({ user }) {
     const { data, error, isLoading } = useFetchAlbumsQuery(user);
     const [addAlbum, results] = useAddAlbumsMutation();
 
-    const handlAddAlbums = () => {
+    const handlAddAlbum = () => {
         addAlbum(user);
     }
 
@@ -31,7 +31,7 @@ function AlbumsList({ user }) {
         <div>
             <div className="flex flex-row justify-between items-center m-3  ">
                 Albums for {user.name}
-                <Button onClick={handlAddAlbums}>+Add Album</Button>
+                <Button onClick={handlAddAlbum}>+Add Album</Button>
             </div>
             <div>{content}</div>
         </div>

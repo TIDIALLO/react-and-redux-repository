@@ -1,11 +1,35 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { faker } from "@faker-js/faker";
 
+
+// DEV ONLY!!!
+const pause = (duration) => {
+    return new Promise((resolve) => {
+        setTimeout(resolve, duration);
+    });
+};
+
+
 const albumsApi = createApi({
     reducerPath: 'albums',
-    baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3005" }),
+    baseQuery: fetchBaseQuery({
+        baseUrl: "http://localhost:3005",
+        fetchFn: async (...args) => {
+            //REMOVE FOR PRODUCTION
+            await pause(1000);
+            return fetch(...args);
+        }
+    }),
     endpoints(builder) {
         return {
+            removeAlbum: builder.mutation({
+                query: (album) => {
+                    return{
+                        method: 'DELETE',
+                        url: `album/${album.id}`
+                    }
+                }
+            }),
             addAlbums: builder.mutation({
                 invalidatesTags: (result, error, user) => {
                     return [{ type: 'Album', id: user.id }]
@@ -20,7 +44,7 @@ const albumsApi = createApi({
                         }
                     }
                 }
-            }), 
+            }),
             fetchAlbums: builder.query({
                 providesTags: (result, error, user) => {
                     return [{ type: 'Album', id: user.id }]
@@ -41,6 +65,7 @@ const albumsApi = createApi({
 
 export const {
     useFetchAlbumsQuery,
-    useAddAlbumsMutation
+    useAddAlbumsMutation,
+    useRemoveAlbumMutation
 } = albumsApi;
 export { albumsApi };

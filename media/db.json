@@ -11,6 +11,10 @@
     {
       "name": "Rudolph Howell Sr.",
       "id": 3
+    },
+    {
+      "name": "Dr. Domingo Kerluke",
+      "id": 4
     }
   ],
   "albums": [
@@ -88,6 +92,26 @@
       "userId": 2,
       "title": "Licensed Fresh Chicken",
       "id": 27
+    },
+    {
+      "userId": 3,
+      "title": "Licensed Rubber Pants",
+      "id": 28
+    },
+    {
+      "userId": 3,
+      "title": "Recycled Frozen Chips",
+      "id": 29
+    },
+    {
+      "userId": 4,
+      "title": "Unbranded Wooden Chair",
+      "id": 30
+    },
+    {
+      "userId": 1,
+      "title": "Small Rubber Chips",
+      "id": 31
     }
   ],
   "photos": []

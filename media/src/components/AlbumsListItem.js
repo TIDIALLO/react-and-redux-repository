@@ -1,17 +1,27 @@
 import { GoTrashcan } from "react-icons/go";
 import Button from "./Button";
 import ExpandablePanel from "./ExpandablePanel";
+import { useRemoveAlbumMutation } from "../store";
+import PhotosList from "./PhotosList";
 
 function AlbumsListItem({ album }) {
-    const header = <div>
-        <Button>
+    const [removeAlbum, results] = useRemoveAlbumMutation();
+
+    const handlHadleRemoveAlbum = () => {
+        removeAlbum(album);
+    }
+
+    const header = <>
+        <Button className='mr-2'
+            loading={results.isLoading}
+            onClick={handlHadleRemoveAlbum}>
             <GoTrashcan></GoTrashcan>
         </Button>
-            {album.title}
-        </div>
+        {album.title}
+    </>
 
     return <ExpandablePanel key={album.id} header={header}>
-        Liste of photo in alb
+        <PhotosList album={album}></PhotosList>
     </ExpandablePanel>
 }
 

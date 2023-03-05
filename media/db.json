@@ -37,9 +37,20 @@
     },
     {
       "userId": 1,
-      "title": "Recycled Wooden Car",
-      "id": 22
+      "title": "Intelligent Plastic Hat",
+      "id": 19
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=73186",
+      "id": 2
+    },
+    {
+      "albumId": 12,
+      "url": "https://loremflickr.com/150/150/abstract?lock=81689",
+      "id": 3
+    }
+  ]
 }
